@@ -29,6 +29,7 @@ public class Question5
 
     HashMap<Integer, Integer> intCounter = new HashMap<Integer, Integer>();
 
+    System.out.print("Number of integers to enter: ");
     Scanner in = new Scanner(System.in);
     int integerNum = in.nextInt();
     
@@ -56,6 +57,6 @@ public class Question5
       }
     }
 
-    System.out.println(highestOccurenceNum);
+    System.out.println("Highest occurence: " + highestOccurenceNum);
   }
 }
