@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class Question5
 {
@@ -25,8 +26,37 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-     
+
+    HashMap<Integer, Integer> intCounter = new HashMap<Integer, Integer>();
+
+    System.out.print("Number of integers to enter: ");
     Scanner in = new Scanner(System.in);
+    int integerNum = in.nextInt();
     
+    for (int i = 0; i < integerNum; i++) 
+    {
+      int number = new Scanner(System.in).nextInt();
+      if (intCounter.get(number) == null) 
+      {
+        intCounter.put(number, 1);
+      }
+      else
+      {
+        intCounter.put(number, intCounter.get(number)+1);
+      }
+    }
+
+    int highestOccurenceNum = 0;
+    int highestOccurence = 0;
+    for (int number : intCounter.keySet())
+    {
+      if (intCounter.get(number) > highestOccurence)
+      {
+        highestOccurenceNum = number;
+        highestOccurence = intCounter.get(number);
+      }
+    }
+
+    System.out.println("Highest occurence: " + highestOccurenceNum);
   }
 }
