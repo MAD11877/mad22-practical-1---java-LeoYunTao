@@ -45,17 +45,17 @@ public class Question5
       }
     }
 
-    int highestOccurenceNum = 0;
-    int highestOccurence = 0;
-    for (int number : intCounter.keySet())
-    {
-      if (intCounter.get(number) > highestOccurence)
-      {
-        highestOccurenceNum = number;
-        highestOccurence = intCounter.get(number);
-      }
-    }
+    // int highestOccurenceNum = 0;
+    // int highestOccurence = 0;
+    // for (int number : intCounter.keySet())
+    // {
+    //   if (intCounter.get(number) > highestOccurence)
+    //   {
+    //     highestOccurenceNum = number;
+    //     highestOccurence = intCounter.get(number);
+    //   }
+    // }
 
-    System.out.println(highestOccurenceNum);
+    // System.out.println(highestOccurenceNum);
   }
 }
